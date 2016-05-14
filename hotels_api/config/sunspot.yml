@@ -1,6 +1,6 @@
 production:
   solr:
-    hostname: de.opensolr.com
+    hostname: http://de.opensolr.com
     port: 80
     log_level: WARNING
     path: solr/hotels
