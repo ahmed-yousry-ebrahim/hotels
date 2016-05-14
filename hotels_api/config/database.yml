@@ -81,6 +81,7 @@ test:
 #
 production:
   <<: *default
-  database: hotels_api_production
-  username: hotels_api
-  password: <%= ENV['HOTELS_API_DATABASE_PASSWORD'] %>
+  host: ec2-54-228-219-2.eu-west-1.compute.amazonaws.com
+  database: d654vhc007p6oj
+  username: xsdkldskqwifzg
+  password: 5-cX8spTmX38iiLuWyBJmAHvQi
