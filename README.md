@@ -7,7 +7,7 @@
 ## How to run localy
 ### The API application
 
-- _cd hotelsapi_
+- cd hotels_api
 - run _bundle install_
 - run _rake db:create_
 - run _rake db:migrate_
