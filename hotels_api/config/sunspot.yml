@@ -3,7 +3,7 @@ production:
     hostname: http://de.opensolr.com
     port: 80
     log_level: WARNING
-    path: solr/hotels
+    path: /solr/hotels
     # read_timeout: 2
     # open_timeout: 0.5
 
