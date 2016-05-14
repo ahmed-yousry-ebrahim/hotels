@@ -1,9 +1,9 @@
 production:
   solr:
-    hostname: de.opensolr.com
+    hostname: www.indexdepot.com
     port: 80
     log_level: WARNING
-    path: /solr/hotels
+    path: /solr/cb432ffee7b6391c/
     # read_timeout: 2
     # open_timeout: 0.5
 
