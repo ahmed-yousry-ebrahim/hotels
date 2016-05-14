@@ -1,0 +1,2 @@
+solr: bundle exec rake sunspot:solr:run
+web: rails s --port 3001

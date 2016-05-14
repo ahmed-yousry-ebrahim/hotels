@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title><%= content_for?(:title) ? yield(:title) : "Hotels" %></title>
+
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body>
+<div class="top-bar">
+  <div class="top-bar-title">
+    <span data-responsive-toggle="responsive-menu" data-hide-for="medium">
+      <button class="menu-icon dark" type="button" data-toggle></button>
+    </span>
+    <a href="<%=root_path%>"><strong>Hotels</strong></a>
+  </div>
+
+</div>
+
+<%= display_flash_messages %>
+<div class="row">
+<%= yield %>
+</div>
+
+</body>
+</html>

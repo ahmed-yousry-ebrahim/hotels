@@ -1,0 +1,23 @@
+$(document).on('ready page:load', function () {
+    $('.star-rating').each(function() {
+        $(this).barrating({
+            theme: 'fontawesome-stars'
+        });
+    });
+
+    $('.star-rating-disabled').each(function() {
+        $(this).barrating({
+            theme: 'fontawesome-stars',
+            readonly: true
+        });
+    });
+
+    $('#autocomplete').autocomplete({
+        serviceUrl: '/hotels/search.json',
+        preventBadQueries: false,
+        triggerSelectOnValidInput: false,
+        onSelect: function (suggestion) {
+           document.location.href = "/hotels/"+suggestion.data
+        }
+    });
+});

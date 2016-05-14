@@ -1,0 +1,38 @@
+<%= form_tag(hotels_path,:method => :post) do %>
+
+    <% if !@errors.nil? && @errors.count %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@errors.count, "error") %> prohibited this hotel from being saved:</h2>
+
+          <ul>
+            <% @errors.each do |field, error_messages| %>
+                <% error_messages.each do |error_message|%>
+                    <li><%= field %>: <%=error_message%></li>
+                <%end%>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+  <div class="field">
+    <%= label_tag :name %><br>
+    <%= text_field_tag :name %>
+  </div>
+  <div class="field">
+    <%= label_tag :address %><br>
+    <%= text_field_tag :address %>
+  </div>
+  <div class="field">
+    <%= label_tag :star_rating %><br>
+    <%=select_tag :star_rating, options_for_select((1..5).to_a), :class=> "star-rating"%>
+  </div>
+
+
+    <div class="field">
+    <%= label_tag :accomodation_type_id, "Accomodation Type" %><br>
+    <%=select_tag :accomodation_type_id, options_from_collection_for_select(AccomodationType.all, "id", "name")%>
+    </div>
+  <div class="actions right">
+    <%= submit_tag "Add", :class =>"expanded large button success float-right"  %>
+  </div>
+<% end %>
