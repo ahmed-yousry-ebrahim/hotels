@@ -18,3 +18,17 @@
 
 - cd hotels
 - run _rails s_
+
+**The problem**
+
+implement a simple REST API that:
+
+- takes care of the basic CRUD operations on a hypothetical Hotel model, allowing to
+manipulate its basic attributes (id, name, address, star_rating, and accomodation_type)
+
+- provides a method that allows searching for a hotel by typing part of its name or address
+Then use Ruby on Rails to build a simple web application that consumes the aforementioned API in
+all its CRUD operations, and build a simple autocomplete search box to look for a given hotel using
+
+- Although they work with the same data set (the catalog of hotels), the API and the web
+application should be developed and deployed as two independent systems
